@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: Run Python Script
+        image: python:3.10
+        size: 2x
+        script:
+          - pip install python-telegram-bot --upgrade
+          - ls
+          - chmod +x *
+          - python3 flash.py
